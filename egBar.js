@@ -1,4 +1,4 @@
 function init() {
-  console.log("test text");
   console.log(document.domain);
+  document.body.style.background = 'pink';
 }

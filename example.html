@@ -1,2 +1,14 @@
-<script type="text/javascript" src="/debugScript"></script>
-<a href="#active" onclick="init();return false;">Click Me</a>
+<!-- <script type="text/javascript" src="/debugScript"></script> -->
+<a href="javascript:(function(){
+  let s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.src = 'http://127.0.0.1:5000/debugScript';
+  document.getElementsByTagName('head')[0].appendChild(s);
+
+  s.onload = function() {
+    init();
+  }
+})();">
+  Bookmark Me
+</a>
+<!-- <a href="#active" onclick="init();return false;">Click Me</a> -->
