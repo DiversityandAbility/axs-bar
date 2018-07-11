@@ -12,5 +12,9 @@ def hello():
     return spitPage("wellcome.html")
 
 @app.route("/bar")
-def main():
+def getBar():
     return spitPage("example.html")
+
+@app.route("/debugScript")
+def debugScript():
+    return spitPage("egBar.js")
