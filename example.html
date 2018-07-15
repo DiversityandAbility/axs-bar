@@ -1,6 +1,7 @@
 <!-- <script type="text/javascript" src="/debugScript"></script> -->
 <a href="javascript:(function(){
   let s = document.createElement('script');
+  s.id = 'debugBar';
   s.type = 'text/javascript';
   s.src = 'http://127.0.0.1:5000/debugScript';
   document.getElementsByTagName('head')[0].appendChild(s);
