@@ -7,15 +7,24 @@ function checkForSelf() {
 }
 
 function establishCan() {
-  let can = document.createElement("canvas");
-  can.id = "UTilBar";
-  can.width = window.innerWidth;
-  can.height = 32;
+  let __body = document.getElementsByTagName('body')[0];
+  let __case = document.createElement('div');
+  let __can = document.createElement('canvas');
 
-  document.getElementsByTagName('body')[0].appendChild(can);
-  let ctx = can.getContext("2d");
-  ctx.fillStyle = "#FF00FF";
-  ctx.fillRect(0, 0, can.width, can.height);
+  __case.appendChild(__can);
+  __body.appendChild(__case);
+
+  let __case_box = __case.getBoundingClientRect();
+
+  __case.id = "UTilBar";
+  __case.style.cssText = 'position: fixed; top: 0; z-index: 999'
+
+  __can.width = __case_box.width;
+  __can.height = 64;
+
+  let __ctx = __can.getContext('2d');
+  __ctx.fillStyle = "#FF00FF";
+  __ctx.fillRect(0, 0, __can.width, __can.height);
 }
 
 function init() {
